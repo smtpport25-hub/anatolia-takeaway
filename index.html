@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171313">
+  <meta name="description" content="Order freshly prepared kebabs, burgers, sides and meal deals from Anatolia Take Away, 134 Charminster Road, Bournemouth.">
+  <title>Anatolia Take Away | Bournemouth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline"><span>FRESHLY PREPARED • BIG FLAVOUR</span><span>134 Charminster Road, Bournemouth</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Anatolia home">
+      <span class="brand-mark">A</span><span><b>ANATOLIA</b><small>TAKE AWAY</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">Menu</a><a href="#about">Our food</a><a href="#contact">Find us</a>
+    </nav>
+    <button class="cart-button" id="open-cart" type="button">Your basket <span id="cart-count">0</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TURKISH FLAVOUR. BOURNEMOUTH FAVOURITE.</p>
+        <h1>GOOD FOOD.<br><em>GOOD MOOD.</em></h1>
+        <p class="hero-intro">From flame-grilled kebabs to stacked burgers and generous sides, find your favourite and order online.</p>
+        <div class="hero-actions"><a class="button button-red" href="#menu">Explore the menu <span>→</span></a><a class="phone-link" href="tel:01202531125">Call 01202 531125</a></div>
+        <div class="hero-meta"><span>✦ Kebabs & wraps</span><span>✦ Burgers</span><span>✦ Meal deals</span></div>
+      </div>
+      <div class="hero-image">
+        <div class="image-label"><span>MADE TO SATISFY</span><b>ANATOLIA</b></div>
+      </div>
+      <div class="hero-stamp">BOLD<br>FLAVOUR<br><span>✦</span></div>
+    </section>
+
+    <section class="order-strip">
+      <div><span class="strip-icon">01</span><b>Choose your favourites</b><small>Browse our menu</small></div>
+      <div><span class="strip-icon">02</span><b>Build your basket</b><small>Add extras and sides</small></div>
+      <div><span class="strip-icon">03</span><b>Place your order</b><small>Delivery or collection details</small></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><div><p class="eyebrow">WHAT ARE YOU CRAVING?</p><h2>THE <em>MENU</em></h2></div><p>All your Anatolia favourites, in one place.</p></div>
+      <div class="menu-toolbar">
+        <div class="category-tabs" id="category-tabs">
+          <button class="active" data-category="all">All items</button>
+          <button data-category="kebabs">Kebabs & wraps</button>
+          <button data-category="burgers">Burgers</button>
+          <button data-category="sides">Sides</button>
+          <button data-category="meals">Meal deals</button>
+          <button data-category="drinks">Drinks & desserts</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="menu-search" type="search" placeholder="Search the menu..." aria-label="Search menu"></label>
+      </div>
+      <div class="menu-layout">
+        <div class="products-grid" id="products-grid"></div>
+        <aside class="basket-card">
+          <div class="basket-heading"><div><p class="eyebrow">READY WHEN YOU ARE</p><h3>Your basket</h3></div><span class="basket-count" id="side-count">0</span></div>
+          <div id="basket-items" class="basket-items"><div class="empty-basket">Your basket is waiting for something delicious.</div></div>
+          <div class="basket-total"><span>Subtotal</span><b id="basket-total">£0.00</b></div>
+          <p class="basket-note">Delivery charges, if applicable, will be confirmed by the restaurant.</p>
+          <button class="button button-red full" id="checkout-button" disabled>Continue to checkout <span>→</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="food-banner" id="about">
+      <div><p class="eyebrow">MADE FOR BIG APPETITES</p><h2>YOUR TABLE.<br><em>YOUR ANATOLIA.</em></h2><p>Whether it’s a quick bite, a family feast or a treat-yourself kind of evening, there’s something on the menu for everyone.</p><a class="button button-light" href="#menu">Find your favourite <span>→</span></a></div>
+      <div class="banner-photo"></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><p class="eyebrow">COME AND FIND US</p><h2>SEE YOU <em>SOON.</em></h2><p>134 Charminster Road<br>Bournemouth, BH8 8UU</p><a class="button button-red" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=134+Charminster+Road+Bournemouth+BH8+8UU">Get directions ↗</a></div>
+      <div class="contact-details"><div><small>GIVE US A CALL</small><a href="tel:01202531125">01202 531125</a></div><div><small>ORDER ONLINE</small><p>Choose your food, add it to your basket and send your order request.</p></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">A</span><span><b>ANATOLIA</b><small>TAKE AWAY</small></span></a><p>Turkish flavour in Bournemouth.</p><span>© <span id="year"></span> Anatolia Take Away</span></footer>
+
+  <div class="modal-backdrop" id="checkout-modal" hidden>
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+      <button class="close-modal" id="close-checkout" aria-label="Close">×</button>
+      <p class="eyebrow">ALMOST THERE</p><h2 id="checkout-title">Order <em>details</em></h2>
+      <form id="checkout-form">
+        <div class="form-row"><label>Your name<input name="name" required autocomplete="name" placeholder="Full name"></label><label>Phone number<input name="phone" required type="tel" autocomplete="tel" placeholder="Best contact number"></label></div>
+        <label>Order type<select name="orderType" required><option value="Collection">Collection</option><option value="Delivery">Delivery</option></select></label>
+        <label>Delivery address (if delivery)<textarea name="address" rows="2" placeholder="House number, street and postcode"></textarea></label>
+        <label>Notes for the kitchen<textarea name="notes" rows="2" placeholder="Any requests?"></textarea></label>
+        <div class="checkout-summary"><span>Basket total</span><b id="checkout-total">£0.00</b></div>
+        <button class="button button-red full" type="submit">Review order request <span>→</span></button>
+        <p class="form-disclaimer">This preview currently prepares your order request on this device. Live order transmission and online payment must be connected before launch.</p>
+      </form>
+      <div id="order-review" hidden></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
